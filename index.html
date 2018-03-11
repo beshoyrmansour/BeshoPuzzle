@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BeshoPuzzle</title>
+    <meta name="description" content="A jQuery plugin for turning an image into a jigsaw puzzle game.">
+    <link rel="shortcut icon" href="//pixabay.com/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/pure-min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+    <div style="max-width:900px;padding:0 5px;margin:10px auto;text-align:center">
+        <h1>Besho
+            <span style="color:crimson">Puzzle</span>
+        </h1>
+        <h4>Using jQuery to turn an image into a puzzle game.</h4>
+        <br>
+        <div id="levelPicker">
+            <b>Change Level :</b>
+            &nbsp;
+            <a href="#" class="restart-puzzle" data-grid="3">3x3</a>
+            &nbsp;
+            <a href="#" class="restart-puzzle" data-grid="5">5x5</a>
+            &nbsp;
+            <a href="#" class="restart-puzzle" data-grid="7">7x7</a>
+            &nbsp;
+            <a href="#" class="restart-puzzle" data-grid="10">10x10</a>
+        </div>
+        <h3 id="SelectLabel">Select image</h3>
+        <div id="imagesSelector" class="images-selector">
+            <img id="img2" class="imageThumb" onclick="selectImage(this.id)" src="9.jpg"></img>
+            <img id="img1" class="imageThumb" onclick="selectImage(this.id)" src="image.jpg"></img>
+            <img id="img3" class="imageThumb" onclick="selectImage(this.id)" src="4.png"></img>
+            <img id="img2" class="imageThumb" onclick="selectImage(this.id)" src="9.jpg"></img>
+            <img id="img1" class="imageThumb" onclick="selectImage(this.id)" src="image.jpg"></img>
+            <img id="img3" class="imageThumb" onclick="selectImage(this.id)" src="4.png"></img>
+            <img id="img2" class="imageThumb" onclick="selectImage(this.id)" src="9.jpg"></img>
+            <img id="img1" class="imageThumb" onclick="selectImage(this.id)" src="image.jpg"></img>
+            <img id="img3" class="imageThumb" onclick="selectImage(this.id)" src="4.png"></img>
+            <img id="img2" class="imageThumb" onclick="selectImage(this.id)" src="9.jpg"></img>
+            <img id="img1" class="imageThumb" onclick="selectImage(this.id)" src="image.jpg"></img>
+            <img id="img3" class="imageThumb" onclick="selectImage(this.id)" src="4.png"></img>
+        </div>
+        <button id="startButton" class="start-button" onclick="runFunction(jQuery)">Start Game</button>
+    </div>
+    <div>
+        <div id="puzzle-containment">
+            <div class="pure-g" style="max-width:1280px;margin:auto">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div style="margin:10px">
+                        <img id="source_image" class="pure-img" src="9.jpg">
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div id="pile" style="margin:10px">
+                        <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
+                            <h2 style="margin:0 0 20px">Well done!</h2>
+                            <!-- <a class="pure-button button-lg restart-puzzle" data-grid="3">Restart Puzzle</a> -->
+                            <a class="pure-button button-lg" onclick="location.reload();">Restart Puzzle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="jQueryRotate.js"></script>
+        <script src="jquery.snap-puzzle.js"></script>
+</body>
+
+</html>
